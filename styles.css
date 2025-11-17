@@ -584,7 +584,7 @@ section h2 {
   background: #ffffff;
   padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+ 
   transition: 0.3s ease;
   cursor: pointer;
   overflow: hidden;
@@ -618,18 +618,22 @@ section h2 {
 /* ------- CARTES UNIQUES PAR IDENTIFIANT ------- */
 
 /* 1 – Maintenance : bordure verte */
-#srv-maintenance.cardiss {
+#srv-maintenance.cardiss:hover {
   border-left: 6px solid var(--green);
+  background: #dbf3e6;
 }
 
 /* 2 – Étude : fond légèrement bleu */
-#srv-etude.cardiss {
+#srv-etude.cardiss:hover {
   background: #eef8ff;
 }
 
+
 /* 3 – Bilan : effet cadre */
-#srv-bilan.cardiss img {
-  border: 4px solid var(--green);
+#srv-bilan.cardiss:hover {
+  background: #f0e1eb;
+   border-right: 6px solid ;
+   border-right-color: #a73a64;
 }
 
 /* 4 – Optimisation : arrondi asymétrique */
@@ -638,17 +642,19 @@ section h2 {
 }
 
 /* 5 – Accompagnement : ombre colorée */
-#srv-accompagnement.cardiss {
+#srv-accompagnement.cardiss:hover {
   box-shadow: 0 4px 20px rgba(58,167,107,0.25);
+  background: #f7e3e4;
 }
 
 /* 6 – Devis : bordure pointillée */
-#srv-devis.cardiss {
+#srv-devis.cardiss:hover {
   border: 2px dashed var(--green);
+  background: #d7f7e5;
 }
 
 /* 7 – Biogaz : teinte chaude */
-#srv-techbiog.cardiss {
+#srv-techbiog.cardiss:hover {
   background: #fff7e5;
 }
 
@@ -657,14 +663,20 @@ section h2 {
   border-radius: 50%;
 }
 
+/* 8 – Hydrogène : image ronde */
+#srv-tech-hydro.cardiss:hover {
+  background: #f8f8e5;
+}
+
 /* 9 – Énergie de cuisson : image inclinée */
 #srv-enrcui.cardiss img {
   transform: rotate(-2deg);
 }
 
 /* 10 – Formation : cadre bleu */
-#srv-formatec.cardiss {
+#srv-formatec.cardiss:hover {
   border: 4px solid #70c0e8;
+  background: #d2f0fc;
 }
 
 

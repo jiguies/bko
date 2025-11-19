@@ -1,0 +1,102 @@
+/* guides.css */
+/* Styles globaux pour la section "Guides & Conseils" */
+
+:root{
+  --cream: #f8f4ee;
+  --green: #3aa76b;
+  --sky: #70c0e8;
+  --muted: #6b6b6b;
+  --accent: #e65c00;
+  --max-width: 1100px;
+  --base-font: 'Inter', system-ui, Arial, sans-serif;
+}
+
+*{box-sizing: border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: var(--base-font);
+  background: linear-gradient(180deg, #fff 0%, var(--cream) 100%);
+  color:#222;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Container */
+.container{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px;
+}
+
+/* Header miniature pour pages guides */
+.page-header{
+  padding: 20px 0 12px;
+  border-bottom: 3px solid var(--accent);
+  margin-bottom: 18px;
+}
+.page-header h1{
+  font-size: 28px;
+  color: #123;
+  letter-spacing: -0.5px;
+}
+.page-header p.lead{
+  color: var(--muted);
+  margin-top:8px;
+}
+
+/* Article / contenu */
+.article{
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(15,15,15,0.04);
+  margin-bottom: 18px;
+}
+.article h2{font-size:22px;margin-bottom:8px;color:#0b3550}
+.article h3{font-size:18px;margin-top:12px;color:var(--accent)}
+.article p{margin:10px 0;color:#333}
+
+/* Checklist / étapes */
+.steps{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
+  margin-top:12px;
+}
+.step{
+  background: linear-gradient(180deg,#fff,#fbfbfb);
+  border-left:4px solid var(--sky);
+  padding:14px;
+  border-radius:8px;
+}
+.step strong{display:block;margin-bottom:6px}
+
+/* CTA */
+.cta{
+  display:inline-block;
+  margin-top:14px;
+  padding:12px 18px;
+  background:var(--green);
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow: 0 6px 14px rgba(58,167,107,0.18);
+}
+
+/* Aside: boite résumé émotionnelle (persuasive mais honnête) */
+.aside-appeal{
+  margin-top:14px;
+  padding:14px;
+  border-left:4px solid var(--accent);
+  background:#fffbe9;
+  border-radius:8px;
+}
+.aside-appeal p{margin:0;color:#2b2b2b}
+
+/* Responsive */
+@media (max-width:700px){
+  .container{padding:16px}
+  .page-header h1{font-size:22px}
+}

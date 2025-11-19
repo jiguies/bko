@@ -1,0 +1,64 @@
+/* entreprise.css */
+/* Styles pour pages entreprise (présentation, prestations, partenaires) */
+
+:root{
+  --brand-dark:#0b3550;
+  --brand-accent:#e65c00;
+  --brand-soft:#f5f7fa;
+  --max-width:1100px;
+  --font: 'Inter', system-ui, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: var(--font);
+  background: #ffffff;
+  color:#1b1b1b;
+  margin:0;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:30px}
+
+/* Hero entreprise */
+.hero{
+  background: linear-gradient(90deg,#fff,#fbfbff);
+  padding:26px;border-radius:8px;margin-bottom:18px;
+  display:flex;gap:18px;align-items:center;
+}
+.hero .visual{flex:0 0 180px;}
+.hero .visual img{width:100%;height:auto;border-radius:6px;object-fit:cover}
+.hero .text{flex:1}
+.hero h1{color:var(--brand-dark);font-size:26px;margin-bottom:8px}
+.hero p{color:#444}
+
+/* Cards prestations */
+.prestation-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;margin-top:12px;
+}
+.prestation{
+  background: #fff;border-radius:8px;padding:14px;border:1px solid #eef2f5;
+  box-shadow:0 6px 18px rgba(10,20,30,0.03);
+}
+.prestation h3{margin-bottom:8px;color:var(--brand-accent)}
+.prestation p{color:#333}
+
+/* Partenaires: logos line */
+.partners{
+  display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px;
+}
+.partner-logo{
+  background:#fff;padding:10px;border-radius:8px;border:1px solid #eef2f5;width:120px;height:64px;display:flex;align-items:center;justify-content:center;
+}
+
+/* Footer mini CTA */
+.cta-contact{
+  margin-top:18px;padding:14px;background:linear-gradient(90deg,#fff,#f7fff8);border-left:4px solid var(--brand-accent);border-radius:8px;
+}
+
+/* Responsive */
+@media(max-width:700px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .hero .visual{width:100%}
+}

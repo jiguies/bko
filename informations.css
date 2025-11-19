@@ -1,0 +1,126 @@
+/* informations.css (version améliorée) */
+
+:root {
+  --bg: #f7f9fb;
+  --card-bg: #ffffff;
+  --muted: #646c75;
+  --accent: #0b3550;
+  --accent-2: #e65c00;
+  --max-width: 1100px;
+  --font: 'Inter', Arial, sans-serif;
+  --radius: 12px;
+  --overlay: rgba(11, 53, 80, 0.06);
+  --border: #e9eef3;
+  --shadow: rgba(9, 30, 45, 0.03);
+}
+
+/* Reset / base */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  font-family: var(--font);
+  color: #111;
+  line-height: 1.6;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 40px auto;
+  padding: 24px;
+}
+
+/* Header juridique */
+.header-legal {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 22px rgba(9, 30, 45, 0.06);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.header-legal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  pointer-events: none;
+}
+.header-legal h1 {
+  font-size: 28px;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+.header-legal {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Sections légales */
+.legal-section {
+  background: linear-gradient(180deg, var(--card-bg), #fbfcfd);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+.legal-section h2 {
+  color: var(--accent);
+  font-size: 20px;
+  margin: 0 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 3px solid rgba(230, 92, 0, 0.06);
+}
+.legal-section p, .legal-section li {
+  color: var(--muted);
+  font-size: 16px;
+  margin: 10px 0;
+}
+.legal-list {
+  margin-left: 24px;
+}
+
+
+/* Liens */
+a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Ancres internes (faciliter la navigation) */
+.legal-section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Responsive */
+@media (min-width: 900px) {
+  .container {
+    padding: 32px;
+  }
+  .legal-section {
+    padding: 24px;
+  }
+  .header-legal h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    margin: 16px;
+    padding: 16px;
+  }
+  .header-legal h1 {
+    font-size: 22px;
+  }
+  .legal-section {
+    padding: 16px;
+  }
+}

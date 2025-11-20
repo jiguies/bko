@@ -44,13 +44,35 @@ body{
 .prestation h3{margin-bottom:8px;color:var(--brand-accent)}
 .prestation p{color:#333}
 
-/* Partenaires: logos line */
-.partners{
-  display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px;
+/* Partenaires: logos line – FIX scaling */
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
 }
-.partner-logo{
-  background:#fff;padding:10px;border-radius:8px;border:1px solid #eef2f5;width:120px;height:64px;display:flex;align-items:center;justify-content:center;
+
+.partner-logo {
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #eef2f5;
+  width: 140px;              /* largeur fixe propre */
+  height: 100px;             /* hauteur augmentée */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;          /* empêche débordement */
 }
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;       /* garde proportions parfaites */
+}
+
 
 /* Footer mini CTA */
 .cta-contact{

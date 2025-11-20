@@ -90,3 +90,17 @@
     mega.addEventListener('mouseleave', closeMegaDelayed);
   }
 })();
+
+
+// Fermer le menu si on clique hors du panneau
+document.addEventListener("click", function (e) {
+    const nav = document.querySelector(".mobile-nav");
+    const btn = document.querySelector(".mobile-menu-btn");
+
+    // Si le menu est ouvert et que le clic n'est NI sur le menu NI sur le bouton
+    if (document.body.classList.contains("show-menu") &&
+        !nav.contains(e.target) &&
+        !btn.contains(e.target)) {
+        document.body.classList.remove("show-menu");
+    }
+});

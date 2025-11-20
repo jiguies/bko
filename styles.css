@@ -840,210 +840,84 @@ section h2 {
     font-family:'NewAmsterdam-Regular'; /* Police */
 }
 
+/* ======================= */
+/*   MOBILE NAV PAR DÉFAUT */
+/* ======================= */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #ffffff;
+    transition: 0.35s ease;
+    z-index: 99999;
+    display: block;
+    padding-top: 100px;
+    box-shadow: -4px 0 25px rgba(0, 0, 0, 0.15);
+}
 
-.mobile-menu-btn, .mobile-nav{
+/* Cache le bouton hamburger sur desktop */
+.mobile-menu-btn {
     display: none;
 }
 
 
-
-
 /* ===================================================== */
-/* =========   VERSION MOBILE / TABLETTE  ≤ 1024px  ===== */
+/* ======================   MOBILE   ==================== */
 /* ===================================================== */
-
 @media (max-width:1024px){
 
-    /* Masquer le menu desktop */
-  .main-nav {
-      display: none !important;
-  }
+    /* Cacher le menu desktop */
+    .main-nav {
+        display: none !important;
+    }
 
-  /* Bouton hamburger */
-  .mobile-menu-btn {
-      display: block;
-      font-size: 32px;
-      cursor: pointer;
-      padding: 10px 15px;
-      border-radius: 8px;
-      background: var(--green);
-      color: white;
-  }
+    /* Bouton hamburger */
+    .mobile-menu-btn {
+        display: block;
+        font-size: 34px;
+        cursor: pointer;
+        padding: 6px 14px;
+        background: var(--green);
+        color: white;
+        border-radius: 6px;
+        user-select: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    }
 
-  /* NAV MOBILE */
-  .mobile-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 70%;
-      height: 100vh;
-      background: white;
-      box-shadow: -4px 0 20px rgba(0,0,0,0.2);
-      padding-top: 80px;
-      transition: 0.35s ease;
-      z-index: 99999;
-  }
+    /* Mobile nav visible mais hors écran */
+    .mobile-nav {
+        display: block;
+    }
 
-  .mobile-nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding-left: 25px;
-  }
+    /* UL du menu */
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
 
-  .mobile-nav a {
-      color: #222;
-      font-size: 20px;
-      font-family: "Roboto-Bold";
-      text-decoration: none;
-  }
+    /* Liens du menu */
+    .mobile-nav a {
+        font-size: 22px;
+        text-decoration: none;
+        color: #222;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        transition: 0.2s ease;
+    }
 
-  /* Quand on clique sur le bouton hamburger */
-  body.show-menu .mobile-nav {
-      right: 0;
-  }
+    /* Hover */
+    .mobile-nav a:hover {
+        color: var(--green);
+        padding-left: 8px;
+    }
 
-  /* Cacher le mega-menu sur mobile */
-  .mega {
-      display: none !important;
-  }
-
-
-/* Containers */
-.container{
-    padding: 0 12px;
-    max-width: 100%;
-}
-
-/* HEADER */
-.header-main{
-    padding: 12px 0;
-}
-
-.brand h1{
-    font-size: 18px;
-}
-
-.logo-mark{
-    width: 60px;
-    height: 60px;
-    font-size: 18px;
-}
-
-/* MENU */
-.main-nav ul{
-    flex-direction: column;
-    gap: 12px;
-    background: white;
-    padding: 15px 0;
-    width: 100%;
-}
-
-.main-nav{
-    display:none; /* Tu pourras l’activer avec un burger JS */
-}
-
-.mega{
-    display:none !important; /* Mega-menu désactivé sur mobile */
-}
-
-/* HERO / CAROUSEL */
-.slide{
-    height: 320px; /* Hauteur réduite */
-}
-
-.slide-content{
-    padding: 20px;
-    max-width: 90%;
-}
-
-.slide-content h1{
-    font-size: 26px;
-    line-height: 1.15;
-}
-
-.slide-content h2{
-    font-size: 18px;
-}
-
-.nav{
-    padding: 8px;
-}
-
-.dots button{
-    width: 10px;
-    height: 10px;
-}
-
-/* TITRES */
-section h2{
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-/* CARTES */
-.cards-container,
-.icons-container{
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 18px;
-}
-
-.card img{
-    height: 140px;
-}
-
-/* PRODUITS */
-.materiel-catalogue{
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
-}
-
-.product img{
-    height: 120px;
-}
-
-/* SECTION SERVICES (image gauche) */
-.services-content{
-    flex-direction: column;
-    text-align: center;
-}
-
-.sec-services img{
-    width: 100%;
-}
-
-/* A PROPOS */
-.apropos-content{
-    flex-direction: column-reverse;
-    text-align:center;
-}
-
-.sec-apropos img{
-    width:100%;
-}
-
-/* CONTACTS */
-.contact-img{
-    height: 180px;
-}
-
-/* FOOTER */
-.edf-footer-container{
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    text-align: center;
-}
-
-.edf-col{
-    width: 100%;
-}
-
-.edf-socials{
-    gap: 15px;
-}
-
+    /* Animation du panneau quand show-menu est activé */
+    body.show-menu .mobile-nav {
+        right: 0;
+    }
 }
